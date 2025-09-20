@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Weather from "../components/Weather.astro";
+import BackButton from "../components/BackButton.astro";
 ---
 
 <BaseLayout title="Caen in World War Two"></BaseLayout>
@@ -11,7 +13,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   
     <link rel="stylesheet" href="/global-info-pages.css" />
-    <script src="/Caen-Java.js" defer></script>
   </head>
 
   <body>
@@ -92,22 +93,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       allowfullscreen>
     </iframe>
 
-    <h5>Weather</h5>
-
-    <!-- this weather app came with a preloaded api :-) -->
-     
-    <section style="max-width:900px;margin:20px auto;padding:16px;border-radius:12px;background:#10192b;color:#e7eefc">
-      <div style="display:flex;gap:20px;align-items:center;justify-content:center;margin-bottom:12px;">
-        <strong>Caen Current Weather</strong>
-        <span id="current-weather" aria-live="polite"></span>
-      </div>
-      <div id="forecast-weather" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;"></div>
-    </section>
-
-    <a class="weatherwidget-io" href="https://forecast7.com/en/49d18n0d37/caen/"
-       data-label_1="CAEN" data-label_2="WEATHER" data-font="Georgia"
-       data-icons="Climacons Animated" data-theme="grass">CAEN WEATHER</a>
  
+     <h5>Weather</h5>
+   <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="CAEN" data-label_2="WEATHER" data-theme="original" >CAEN WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
 
     <footer>
       <p><small>
@@ -121,11 +112,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <a href="https://www.booking.com/" target="_blank" rel="noopener">booking.com</a>
       </small></p>
     </footer>
+   <BackButton label="Back to Previous Page" />
   </body>
 </html>
 </BaseLayout>
-
-<!--<script>
-      import { loadWeather } from “watherScript.js";
-document.addEventListener(“DOMContentLoaded”, function() { loadWeather(‘123’, ‘456’)})
-</script> -->

@@ -1,0 +1,48 @@
+---
+const { locationName, href } = Astro.props;
+---
+
+<div class="weather-widget">
+  <h5>{locationName}</h5>
+  <a
+    class="weatherwidget-io"
+    href={href}
+    data-label_1={locationName.toUpperCase()}
+    data-label_2="WEATHER"
+    data-theme="original"
+  >
+    {locationName} WEATHER
+  </a>
+</div>
+
+<!-- keep the script inline so it runs -->
+<script is:inline>
+{`
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);
+    js.id=id;
+    js.src='https://weatherwidget.io/js/widget.min.js';
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}(document,'script','weatherwidget-io-js');
+`}
+</script>
+
+
+<style>
+  .weather-widget {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background: rgba(240,240,240,0.9);
+  }
+
+  .weather-widget h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+</style>

@@ -1,74 +1,189 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Weather from "../components/Weather.astro";
+import BackButton from "../components/BackButton.astro";
 ---
 
-<link rel="stylesheet" href="/global-info-pages.css" />
-<script src="/StMere-Java.js" defer></script>
+<BaseLayout title="St Mere Eglise in World War Two" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>St Mere Eglise in World War Two</title>
 
-<BaseLayout title="St Mere Eglise">
-  <header>
-    <h1>St Mere Eglise</h1>
-  </header>
+    <link rel="stylesheet" href="/global-info-pages.css" />
+  </head>
 
-  <main>
-    <article class="content">
-      <!-- Featured image (replace with your own asset if you like) -->
-      <!-- <img src="/images/st-mere-eglise.jpg" alt="St Mère Église" class="featured" /> -->
+  <body>
+    <header>St Mere Eglise In World War 2</header>
 
-      <section>
-        <h2>History</h2>
-        <p>
-          The town played a significant part in the World War II Normandy
-          landings because of its position in the middle of route N13, which the
-          Germans would have used to counterattack Allied landings on Utah and
-          Omaha Beaches. In the early morning of 6 June 1944, mixed units of the
-          U.S. 82nd Airborne and U.S. 101st Airborne Divisions occupied the town
-          in Mission Boston, making it one of the first towns liberated in the
-          invasion.
-        </p>
-      </section>
+    <h1>History</h1>
 
-      <section>
-        <h2>Sites to Visit</h2>
-        <ul>
-          <li>Airborne Museum (Musée Airborne)</li>
-          <li>
-            Église Notre-Dame de Sainte-Mère-Église (paratrooper memorial)
-          </li>
-          <li>Iron Mike Monument (La Fière)</li>
-          <li>Utah Beach areas nearby</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Tour Information</h2>
-        <p>
-          Half-day and full-day guided tours available from Bayeux & Carentan.
-        </p>
-      </section>
-
-      <section>
-        <h2>Weather (Local)</h2>
-        <div
-          style="max-width:900px;margin:20px auto;padding:16px;border-radius:12px;background:#10192b;color:#e7eefc"
-        >
-          <div
-            style="display:flex;gap:20px;align-items:center;justify-content:center;margin-bottom:12px;"
-          >
-            <strong>Current</strong>
-            <span id="current-weather"></span>
-          </div>
-          <div
-            id="forecast-weather"
-            style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;"
-          >
-          </div>
-        </div>
-      </section>
-
-      <a href="/northern-france" class="back-btn"
-        >← Back to Northern France Map</a
+    <p>
+      The town played a significant part in the World War II Normandy landings
+      because of its position in the middle of route N13, which the Germans
+      would have used to counterattack Allied landings on Utah and Omaha
+      Beaches. In the early morning of 6 June 1944, mixed units of the U.S. 82nd
+      Airborne and U.S. 101st Airborne Divisions occupied the town in Mission
+      Boston, making it one of the first towns liberated in the invasion.<i
+        >More info</i
       >
-    </article>
-  </main>
-</BaseLayout>
+      <a
+        href="https://war-documentary.info/sainte-mere-eglise-1944/"
+        target="_blank"
+        rel="noopener">here</a
+      >.
+    </p>
+
+    <div class="image-row">
+      <img
+        src="https://war-documentary.info/wp-content/uploads/2021/10/planning-5.jpg"
+        alt="u.s. Paratroopers preparing"
+      />
+      <img
+        src="https://war-documentary.info/wp-content/uploads/2021/10/paratroopers-dropping-from-douglas-c-47-skytrains..jpg"
+        alt="Paracutes from dc10`s"
+      />
+      <img
+        src="https://war-documentary.info/wp-content/uploads/2021/10/capturing-town-10.jpg"
+        alt="Liberation of St Mere Eglise"
+      />
+    </div>
+
+    <h2>Places and Sights</h2>
+
+    <ol class="custom-counter">
+      <li>
+        The Airborn Museum — Takes roughly 2.5hrs — Entry €11.50 —
+        <a
+          href="https://airborne-museum.org/en/homepage/"
+          target="_blank"
+          rel="noopener">CLICK HERE!</a
+        >
+      </li>
+      <li>
+        D-Day Collins Museum — Takes 1 to 2 hours — Entry €9.00 —
+        <a href="https://ddaycollins.com/" target="_blank" rel="noopener"
+          >CLICK HERE!</a
+        >
+      </li>
+      <li>
+        Historical Farm with ww2 collection — Takes 1 to 2 hours — Entry €10 —
+        <a href="https://ferme-musee.manche.fr/" target="_blank" rel="noopener"
+          >CLICK HERE!</a
+        >
+      </li>
+    </ol>
+
+    <h3>Accommodation</h3>
+
+    <p>
+      <i
+        >The following accommodations links are suggestions because of their
+        proximity to museums relating to Caen in World War Two:</i
+      >
+    </p>
+
+    <ul>
+      <li>
+        <img
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/587700019.jpg?k=2b1468ea79a4f51be086da911feee729d1b32ded1e4b86c008e69af684a5ffd0&o="
+          alt="Hotel"
+        /><br />
+        <a
+          href="https://www.booking.com/hotel/fr/chateau-de-franquetot.en-gb.html?aid=373411&label=sainte-mere-eglise-lAWOmTW9lSBxS45Q6zxzwwS394368302869%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-784524950041%3Alp1007901%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9Ybz4KBg0DTFCTn0pIbYiAXw&sid=743d7755c2bfcd8f6a7c24f8a61039a9&all_sr_blocks=942140104_388008780_2_2_0&checkin=2026-02-21&checkout=2026-02-23&dest_id=-1465066&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=942140104_388008780_2_2_0&hpos=1&matching_block_id=942140104_388008780_2_2_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=942140104_388008780_2_2_0__27760&srepoch=1758383064&srpvid=af406ea942d0036f&type=total&ucfs=1&"
+          target="_blank"
+          rel="noopener"
+          >CHÂTEAU DE FRANQUETOT
+        </a>
+        <ul style="color: rgb(251, 14, 14);"><li>Score = 9.5</li></ul>
+      </li>
+
+      <li>
+        <img
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/627678911.jpg?k=11210f3d4d342a218b42019225a1b8f467de344d29211782f84f98b5faaf978b&o="
+          alt="Hotel"
+        /><br />
+        <a
+          href="https://www.booking.com/hotel/fr/auberge-le-john-s.en-gb.html?aid=373411&label=sainte-mere-eglise-lAWOmTW9lSBxS45Q6zxzwwS394368302869%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-784524950041%3Alp1007901%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9Ybz4KBg0DTFCTn0pIbYiAXw&sid=743d7755c2bfcd8f6a7c24f8a61039a9&all_sr_blocks=1329279801_408315509_2_2_0&checkin=2026-02-21&checkout=2026-02-23&dest_id=-1465066&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=2&highlighted_blocks=1329279801_408315509_2_2_0&hpos=2&matching_block_id=1329279801_408315509_2_2_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1329279801_408315509_2_2_0__16720&srepoch=1758383473&srpvid=d5036f701c280bc8&type=total&ucfs=1&"
+          target="_blank"
+          rel="noopener">Auberge le John Steele</a
+        >
+        <ul style="color: rgb(251, 14, 14);"><li>Score = 8.3</li></ul>
+      </li>
+
+      <li>
+        <img
+          src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/17269480.jpg?k=6533cf73776a3daa95bd181c86304728523f8f8fd5f5e104ebbaf22db75a9bea&o="
+          alt="Hotel"
+        /><br />
+        <a
+          href="https://www.booking.com/hotel/fr/chambres-d-ha-tes-de-saint-ma-c-en.en-gb.html?label=sainte-mere-eglise-lAWOmTW9lSBxS45Q6zxzwwS394368302869%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-784524950041%3Alp1007901%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9Ybz4KBg0DTFCTn0pIbYiAXw&aid=373411&ucfs=1&checkin=2026-02-21&checkout=2026-02-23&dest_id=-1465066&dest_type=city&group_adults=2&no_rooms=1&group_children=0&srpvid=d5036f701c280bc8&srepoch=1758383606&matching_block_id=55541101_170812705_0_2_0&atlas_src=sr_iw_title"
+          target="_blank"
+          rel="noopener">Chambres d'hôtes de l'Eglise</a
+        >
+        <ul style="color: rgb(251, 14, 14);"><li>Score = 8.2</li></ul>
+      </li>
+    </ul>
+
+    <h4>Related Media/Movies</h4>
+    <p id="relatedmovies">The Longest Day 1962</p>
+
+    <iframe
+      width="1200"
+      height="675"
+      src="https://www.youtube.com/embed/IFS__o4A-nY"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    >
+    </iframe>
+
+    <h5>Weather</h5>
+
+ <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="ST MERE EGLISE" data-label_2="WEATHER" data-theme="original" >ST MERE EGLISE WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+
+    <footer>
+      <p>
+        <small>
+          &copy; Copyright —
+          <a href="https://www.wikipedia.org/" target="_blank" rel="noopener"
+            >wikipedia.org</a
+          >
+          <a href="https://war-documentary.info/" target="_blank" rel="noopener"
+            >War-documentary.com</a
+          >
+          <a
+            href="https://www.memorial-caen.com/"
+            target="_blank"
+            rel="noopener">Memorial-caen.com</a
+          >
+          <a
+            href="https://musee-de-normandie.caen.fr/"
+            target="_blank"
+            rel="noopener">musee-de-normandie.fr</a
+          >
+          <a
+            href="https://en.normandie-tourisme.fr/discover/d-day-and-the-battle-of-normandy/dday-landing-beaches/sword-beach/"
+            target="_blank"
+            rel="noopener">NormandyTourism.fr</a
+          >
+          <a
+            href="https://musee.memorial-pegasus.com/en/horaires-et-tarifs/"
+            target="_blank"
+            rel="noopener">Memorial-Pegasus</a
+          >
+          <a href="https://www.booking.com/" target="_blank" rel="noopener"
+            >booking.com</a
+          >
+        </small>
+      </p>
+    </footer>
+   <BackButton label="Back to Previous Page" />
+  </body>
+</html>
