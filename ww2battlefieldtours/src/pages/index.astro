@@ -1,0 +1,54 @@
+---
+import "../styles/global.css";
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World War Two Battlefield Tours</title>
+    <script src="/java.js" defer></script>
+  </head>
+
+  <body>
+    <h1 class="page-title">
+      <img
+        src="/finished-title.png"
+        class="img-h1"
+        alt="World War Two Battlefield Tours"
+      />
+    </h1>
+
+    <div class="container">
+      <div class="divs">
+        <div class="one">
+          <div class="flag">
+            <div class="stripe blue"></div>
+            <div class="stripe white"></div>
+            <div class="stripe red"></div>
+          </div>
+          <div style="text-align:center">
+            <p>FRANCE</p>
+          </div>
+
+          <button onclick="fireBullets()">FIRE</button>
+          <audio id="gunshot" src="/gunshot.mp3" preload="auto"></audio>
+        </div>
+
+        <div class="two">
+          BELGIUM
+          <p>COMING SOON!</p>
+        </div>
+
+        <div class="three">
+          LUXEMBOURG
+          <p>COMING SOON!</p>
+        </div>
+
+        <div class="four">
+          HOLLAND
+          <p>COMING SOON!</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

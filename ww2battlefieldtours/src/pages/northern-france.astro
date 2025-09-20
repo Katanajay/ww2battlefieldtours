@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<link rel="stylesheet" href="/Northern-France.css" />
+<script src="/Northern-France.js" defer></script>
+<script
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsV_JwZ9L-Yd1r-0Z9a3-jcSmqREkmg3o&callback=initMap">
+</script>
+
+<BaseLayout title="Northern France Map">
+  <header class="nf-header">
+    Explore Locations in Northern France
+  </header>
+
+
+  <main class="nf-main">
+    <div class="sidebar">
+      <div class="location">
+        <button onclick="focusLocation(49.1833, -0.35)">Caen</button>
+        <button class="info-btn" onclick="window.location.href='/caen'">Info</button>
+      </div>
+      <div class="location">
+        <button onclick="focusLocation(49.4144, -1.3183)">St Mere Eglise</button>
+        <button class="info-btn" onclick="window.location.href='/stmere-info'">Info</button>
+      </div>
+      <div class="location">
+        <button onclick="focusLocation(49.3767, -0.8781)">Omaha Beach</button>
+        <button class="info-btn" onclick="window.location.href='/omaha-info'">Info</button>
+      </div>
+      <div class="location">
+        <button onclick="focusLocation(49.283345, -0.202796)">Merville Battery</button>
+        <button class="info-btn" onclick="window.location.href='/merville-info'">Info</button>
+      </div>
+    </div>
+
+    <div id="map"></div>
+  </main>
+</BaseLayout>

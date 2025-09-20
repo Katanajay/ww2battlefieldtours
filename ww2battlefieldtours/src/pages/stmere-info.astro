@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<link rel="stylesheet" href="/global-info-pages.css" />
+<script src="/StMere-Java.js" defer></script>
+
+<BaseLayout title="St Mere Eglise">
+  <header>
+    <h1>St Mere Eglise</h1>
+  </header>
+
+  <main>
+    <article class="content">
+      <!-- Featured image (replace with your own asset if you like) -->
+      <!-- <img src="/images/st-mere-eglise.jpg" alt="St Mère Église" class="featured" /> -->
+
+      <section>
+        <h2>History</h2>
+        <p>
+          The town played a significant part in the World War II Normandy
+          landings because of its position in the middle of route N13, which the
+          Germans would have used to counterattack Allied landings on Utah and
+          Omaha Beaches. In the early morning of 6 June 1944, mixed units of the
+          U.S. 82nd Airborne and U.S. 101st Airborne Divisions occupied the town
+          in Mission Boston, making it one of the first towns liberated in the
+          invasion.
+        </p>
+      </section>
+
+      <section>
+        <h2>Sites to Visit</h2>
+        <ul>
+          <li>Airborne Museum (Musée Airborne)</li>
+          <li>
+            Église Notre-Dame de Sainte-Mère-Église (paratrooper memorial)
+          </li>
+          <li>Iron Mike Monument (La Fière)</li>
+          <li>Utah Beach areas nearby</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Tour Information</h2>
+        <p>
+          Half-day and full-day guided tours available from Bayeux & Carentan.
+        </p>
+      </section>
+
+      <section>
+        <h2>Weather (Local)</h2>
+        <div
+          style="max-width:900px;margin:20px auto;padding:16px;border-radius:12px;background:#10192b;color:#e7eefc"
+        >
+          <div
+            style="display:flex;gap:20px;align-items:center;justify-content:center;margin-bottom:12px;"
+          >
+            <strong>Current</strong>
+            <span id="current-weather"></span>
+          </div>
+          <div
+            id="forecast-weather"
+            style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;"
+          >
+          </div>
+        </div>
+      </section>
+
+      <a href="/northern-france" class="back-btn"
+        >← Back to Northern France Map</a
+      >
+    </article>
+  </main>
+</BaseLayout>

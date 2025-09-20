@@ -1,0 +1,131 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Caen in World War Two"></BaseLayout>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caen in World War Two</title>
+
+  
+    <link rel="stylesheet" href="/Caen.css" />
+    <script src="/Caen-Java.js" defer></script>
+  </head>
+
+  <body>
+    <header>Caen In World War 2</header>
+
+    <h1>History</h1>
+
+    <p>
+      In World War II, Caen, France, became a focal point of the Battle of Normandy due to its strategic location
+      and infrastructure. The city, occupied by German forces, was heavily bombed by the Allies and experienced
+      fierce fighting during the liberation efforts. The battle for Caen was a costly one, resulting in significant
+      destruction and civilian casualties, and it took years to rebuild the city. <i>More info</i>
+      <a href="https://war-documentary.info/battle-of-caen-1944/" target="_blank" rel="noopener">here</a>.
+    </p>
+
+    <div class="image-row">
+      <img src="https://war-documentary.info/wp-content/uploads/2024/10/battle-of-caen-june-july-1944-16.jpg" alt="German Soldiers defending" />
+      <img src="https://war-documentary.info/wp-content/uploads/2024/10/battle-of-caen-june-july-1944-07.jpg" alt="British troops move in" />
+      <img src="https://war-documentary.info/wp-content/uploads/2024/10/battle-of-caen-liberation01.jpg" alt="Liberation of Caen" />
+    </div>
+
+    <h2>Places and Sights</h2>
+
+    <ol class="custom-counter">
+      <li>
+        The Caen Memorial museum — Takes roughly 3hrs — Entry €20.80 —
+        <a href="https://www.memorial-caen.com/" target="_blank" rel="noopener">CLICK HERE!</a>
+      </li>
+      <li>
+        Normandy Museum (Musée de Normandie) — Takes 1 to 2 hours — Entry €7.00 —
+        <a href="https://musee-de-normandie.caen.fr/" target="_blank" rel="noopener">CLICK HERE!</a>
+      </li>
+      <li>
+        Sword Beach — Transport needed, better with hire car — Entry €9.50 —
+        <a href="https://en.normandie-tourisme.fr/discover/d-day-and-the-battle-of-normandy/dday-landing-beaches/sword-beach/" target="_blank" rel="noopener">CLICK HERE!</a>
+      </li>
+      <li>
+        Memorial Museum (Pegasus Bridge) — Takes ~75 mins (some outdoor) — Entry €9.50 —
+        <a href="https://musee.memorial-pegasus.com/en/horaires-et-tarifs/" target="_blank" rel="noopener">CLICK HERE!</a>
+      </li>
+    </ol>
+
+    <h3>Accommodation</h3>
+
+    <p><i>The following accommodations links are suggestions because of their proximity to museums relating to Caen in World War Two:</i></p>
+
+    <ul>
+      <li>
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/197021603.jpg?k=39a23dc0fe26e69b7d9ccb0db73a2e12868ad8136a3897a47c9ef9299a203d3d&o=" alt="Hotel" /><br />
+        <a href="https://www.booking.com/hotel/fr/domitys-les-robes-d-39-airain.html" target="_blank" rel="noopener">Domitys - Les Robes d'Airain</a>
+        <ul style="color: rgb(251, 14, 14);"><li>Score = 8.2</li></ul>
+      </li>
+
+      <li>
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/251610636.jpg?k=df8175fd2cfc1a236cb25f9485dcd1c866d6d40a4f9fa60217cded4f80cc9fdb&o=" alt="Hotel" /><br />
+        <a href="https://www.booking.com/hotel/fr/caen-cote-de-nacre.html" target="_blank" rel="noopener">Novotel Caen Côte de Nacre</a>
+        <ul style="color: rgb(251, 14, 14);"><li>Score = 8</li></ul>
+      </li>
+
+      <li>
+        <img src="https://static11.com-hotel.com/uploads/hotel/331348/photo/mercure-caen-cote-de-nacre_17480685132.jpg" alt="Hotel" /><br />
+        <a href="https://www.booking.com/hotel/fr/mercure-caen-cote-de-nacre.html" target="_blank" rel="noopener">Mercure Caen Cote De Nacre</a>
+        <ul style="color: rgb(251, 14, 14);"><li>Score = 8.3</li></ul>
+      </li>
+    </ul>
+
+    <h4>Related Media/Movies</h4>
+    <p id="relatedmovies">The Battle For Caen 1944</p>
+
+    <iframe
+      width="1200"
+      height="675"
+      src="https://www.youtube.com/embed/R2eXL7Y6mmQ?si=f5FYm2CXiyZ8rqdD"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+
+    <h5>Weather</h5>
+
+    <!-- this weather app came with a preloaded api :-) -->
+     
+    <section style="max-width:900px;margin:20px auto;padding:16px;border-radius:12px;background:#10192b;color:#e7eefc">
+      <div style="display:flex;gap:20px;align-items:center;justify-content:center;margin-bottom:12px;">
+        <strong>Caen Current Weather</strong>
+        <span id="current-weather" aria-live="polite"></span>
+      </div>
+      <div id="forecast-weather" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;"></div>
+    </section>
+
+    <a class="weatherwidget-io" href="https://forecast7.com/en/49d18n0d37/caen/"
+       data-label_1="CAEN" data-label_2="WEATHER" data-font="Georgia"
+       data-icons="Climacons Animated" data-theme="grass">CAEN WEATHER</a>
+ 
+
+    <footer>
+      <p><small>
+        &copy; Copyright —
+        <a href="https://www.wikipedia.org/" target="_blank" rel="noopener">wikipedia.org</a>
+        <a href="https://war-documentary.info/" target="_blank" rel="noopener">War-documentary.com</a>
+        <a href="https://www.memorial-caen.com/" target="_blank" rel="noopener">Memorial-caen.com</a>
+        <a href="https://musee-de-normandie.caen.fr/" target="_blank" rel="noopener">musee-de-normandie.fr</a>
+        <a href="https://en.normandie-tourisme.fr/discover/d-day-and-the-battle-of-normandy/dday-landing-beaches/sword-beach/" target="_blank" rel="noopener">NormandyTourism.fr</a>
+        <a href="https://musee.memorial-pegasus.com/en/horaires-et-tarifs/" target="_blank" rel="noopener">Memorial-Pegasus</a>
+        <a href="https://www.booking.com/" target="_blank" rel="noopener">booking.com</a>
+      </small></p>
+    </footer>
+  </body>
+</html>
+</BaseLayout>
+
+<!--<script>
+      import { loadWeather } from “watherScript.js";
+document.addEventListener(“DOMContentLoaded”, function() { loadWeather(‘123’, ‘456’)})
+</script> -->

@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<link rel="stylesheet" href="/info-pages.css" />
+<script src="/Merville-Java.js" defer></script>
+
+<BaseLayout title="Merville Battery – Battlefield Tours">
+  <header>
+    <h1>Merville Battery – Silencing the Guns</h1>
+  </header>
+
+  <main>
+    <article class="content">
+      <!-- <img src="/images/merville-battery.jpg" alt="Merville Battery" class="featured" /> -->
+
+      <section>
+        <h2>History</h2>
+        <p>
+          The Merville Battery threatened the eastern flank of the landings. In the early hours of D-Day,
+          the 9th Parachute Battalion (6th Airborne) assaulted and neutralized the position under intense pressure.
+        </p>
+      </section>
+
+      <section>
+        <h2>Sites to Visit</h2>
+        <ul>
+          <li>Merville Battery Museum & Bunkers</li>
+          <li>Ranville & Pegasus Bridge area</li>
+          <li>Hillman Strongpoint (nearby)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Tour Information</h2>
+        <p>Commonly paired with Pegasus Bridge and other 6th Airborne sites.</p>
+      </section>
+
+      <section>
+        <h2>Weather (Local)</h2>
+        <div style="max-width:900px;margin:20px auto;padding:16px;border-radius:12px;background:#10192b;color:#e7eefc">
+          <div style="display:flex;gap:20px;align-items:center;justify-content:center;margin-bottom:12px;">
+            <strong>Current</strong>
+            <span id="current-weather"></span>
+          </div>
+          <div id="forecast-weather" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;"></div>
+        </div>
+      </section>
+
+      <a href="/northern-france" class="back-btn">← Back to Northern France Map</a>
+    </article>
+  </main>
+</BaseLayout>

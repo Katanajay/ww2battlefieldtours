@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<link rel="stylesheet" href="/info-pages.css" />
+<script src="/Omaha-Java.js" defer></script>
+
+<BaseLayout title="Omaha Beach – Battlefield Tours">
+  <header>
+    <h1>Omaha Beach – The Cost of the Breakthrough</h1>
+  </header>
+
+  <main>
+    <article class="content">
+      <!-- <img src="/images/omaha-beach.jpg" alt="Omaha Beach" class="featured" /> -->
+
+      <section>
+        <h2>History</h2>
+        <p>
+          Omaha Beach was the bloodiest of the Allied landing sectors on June 6, 1944.
+          Despite formidable defenses and heavy casualties, American forces broke through,
+          paving the way toward Saint-Lô and beyond.
+        </p>
+      </section>
+
+      <section>
+        <h2>Sites to Visit</h2>
+        <ul>
+          <li>Normandy American Cemetery & Overlook</li>
+          <li>Wn62 & Widerstandsnest strongpoints</li>
+          <li>Overlord Museum (Colleville-sur-Mer)</li>
+          <li>Pointe du Hoc (nearby)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Tour Information</h2>
+        <p>Guided tours typically combine Omaha, Pointe du Hoc, and the American Cemetery.</p>
+      </section>
+
+      <section>
+        <h2>Weather (Local)</h2>
+        <div style="max-width:900px;margin:20px auto;padding:16px;border-radius:12px;background:#10192b;color:#e7eefc">
+          <div style="display:flex;gap:20px;align-items:center;justify-content:center;margin-bottom:12px;">
+            <strong>Current</strong>
+            <span id="current-weather"></span>
+          </div>
+          <div id="forecast-weather" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;"></div>
+        </div>
+      </section>
+
+      <a href="/northern-france" class="back-btn">← Back to Northern France Map</a>
+    </article>
+  </main>
+</BaseLayout>

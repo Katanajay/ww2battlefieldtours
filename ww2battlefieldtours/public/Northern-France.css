@@ -1,0 +1,81 @@
+
+@font-face {
+  font-family: "Stencil Cargo Army";
+  src: url("/fonts/Stencil Cargo Army.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "armalite";
+  src: url("/fonts/armalite.ttf") format("truetype");
+  font-display: swap;
+}
+
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+/* I renamed this header to northern france (nf) because it was clashing with another header*/
+
+.nf-header {
+  background-color: lightgreen;
+  color: black;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 16px 20px;
+  text-align: center;
+
+  font-family: "WarWound", Arial, sans-serif;
+}
+
+
+
+.nf-main {
+  display: flex;
+  min-height: calc(100vh - 80px); /* keep map visible */
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #4eee36;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.location button:first-child {
+  font-family: "armalite", Arial, sans-serif;
+}
+
+
+
+
+
+.location {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #ccc;
+}
+button:hover { background-color: #aaa; }
+
+.info-btn {
+  background-color: #666;
+  color: white;
+}
+.info-btn:hover { background-color: #444; }
+
+#map {
+  width: 80%;
+  height: calc(100vh - 80px);
+}
