@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "WarWound";
+  src: url("/fonts/WarWound.otf") format("truetype");
+  font-display: swap;
+}
 
 @font-face {
   font-family: "Stencil Cargo Army";
@@ -21,14 +26,13 @@ body {
 
 .nf-header {
   background-color: lightgreen;
+  font-family: Armalite, Arial, Helvetica, sans-serif;
   color: black;
   font-size: 2.2rem;
   font-weight: bold;
   margin: 0;
   padding: 16px 20px;
   text-align: center;
-
-  font-family: "WarWound", Arial, sans-serif;
 }
 
 

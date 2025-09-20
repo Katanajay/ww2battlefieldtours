@@ -49,7 +49,7 @@ body {
   padding: clamp(12px, 3vw, 24px);
 }
 
-/* this responsive grid was an ai (in devs) suggestion although i had to tweek it worked perfectly */
+/* this responsive grid was an ai (in devs) suggestion although i had to tweek it, worked perfectly */
 .divs {
   display: grid;
   grid-template-columns: repeat(4, minmax(180px, 1fr));
@@ -87,7 +87,7 @@ body {
 .white { background: #FFFFFF; }
 .red   { background: #EF4135; }
 
-/* in the course we learned about movement and people who dont like this so this has been adjusted here */
+/* in the course we learned about movement and people who dont like this, so this has been adjusted here */
 @media (prefers-reduced-motion: reduce) {
   .flag { animation: none; }
 }
