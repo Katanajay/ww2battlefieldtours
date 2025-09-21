@@ -1,5 +1,5 @@
 ---
-const { title = "WW2 Battlefield Tours" } = Astro.props;
+const { title = "WW2 Battlefield Tours", bodyClass = "" } = Astro.props;
 ---
 
 <html lang="en">
@@ -8,17 +8,17 @@ const { title = "WW2 Battlefield Tours" } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
 
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="/global-info-pages.css" />
   </head>
 
-  <body>
-    <!-- This is my Bootstrap Navbar  i added afterwards-->
+  <body class={bodyClass}>
+   <!-- This is my Bootstrap Navbar i added afterwards-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Home</a>
@@ -34,27 +34,17 @@ const { title = "WW2 Battlefield Tours" } = Astro.props;
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="/northern-france">Northern France</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/caen">Caen</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/stmere-info">St Mere Eglise</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/omaha-info">Omaha Beach</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/merville-info">Merville Battery</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/northern-france">Northern France</a></li>
+            <li class="nav-item"><a class="nav-link" href="/caen">Caen</a></li>
+            <li class="nav-item"><a class="nav-link" href="/stmere-info">St Mere Eglise</a></li>
+            <li class="nav-item"><a class="nav-link" href="/omaha-info">Omaha Beach</a></li>
+            <li class="nav-item"><a class="nav-link" href="/merville-info">Merville Battery</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-     <main class="container-fluid p-0">
+    <main class="container-fluid p-0">
       <slot />
     </main>
 

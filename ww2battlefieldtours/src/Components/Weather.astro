@@ -1,6 +1,9 @@
 ---
 const { locationName, href } = Astro.props;
 ---
+<!--Ok So I was having trouble with my original weather app widget Oishin gave me tips on how to change the script so that all locations 
+worked from the one script by changing the lat and long, I finally did it after changing the widget it just wouldn`t work on my old one
+and i am happier with this one as it looks nicer in the page -->
 
 <div class="weather-widget">
   <h5>{locationName}</h5>
@@ -15,7 +18,7 @@ const { locationName, href } = Astro.props;
   </a>
 </div>
 
-<!-- keep the script inline so it runs -->
+
 <script is:inline>
 {`
 !function(d,s,id){

@@ -19,15 +19,39 @@
 
 
 /* Oishin taught us about pseudo elements, this was a game changer here for me otherwise i couldnt get the BG right*/
+/*I am placing my pseudo element here to position the map behind all elements */ 
 
-body::before {
-  position: absolute; inset: 0;
-  background-image: url("/Caen-Map.jpg");
-  background-repeat: repeat;  
-  background-size: auto;
-  opacity: 0.15;
+body.caen::before,
+body.stmere::before,
+body.omaha::before,
+body.merville::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.15;
 }
+
+
+body.caen::before {
+  background-image: url("/public/Caen-Map.jpg");
+}
+
+body.stmere::before {
+  background-image: url("/public/st mere eglise map.jpg");
+}
+
+body.omaha::before {
+  background-image: url("/public/omaha beach map.jpg");
+}
+
+body.merville::before {
+  background-image: url("/public/merville battery map.jpg");
+}
+
 
 header {
   background-color: rgb(234, 71, 77);
@@ -103,8 +127,8 @@ li img {
   font-family: "armalite", system-ui, sans-serif;
   font-size: 30px;
   text-decoration: underline;
-  color: rgba(246, 43, 3, 0.975);
-  text-shadow: 10px 10px 12px black;
+  color: rgba(231, 74, 77, 0.914);
+  text-shadow: 10px 10px 12px rgb(103, 85, 85);
 }
 
 

@@ -114,21 +114,50 @@ p {
   transform: rotate(-12deg); 
 }
 
-
+/* I have decided to upgrade my button in styling and i asked for help on boards i sincerely hope that is ok? 
+the original button wasn`t bad but it looked amateur */ 
 button {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   display: inline-grid;
   place-items: center;
   padding: 0;
-  background-color: red;
+  background: radial-gradient(circle at center, #ff0000 0%, #800000 80%);
   font-size: 16px;
-  font-family: monospace;
+  font-family: "Stencil Cargo Army", monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
   color: white;
   border-radius: 50%;
-  border: 2px outset silver;
+  border: 3px solid #ddd;
   cursor: pointer;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  animation: pulseGlow 1.8s infinite;
 }
+
+
+button:hover {
+  box-shadow: 0 0 24px rgba(255, 0, 0, 0.9), 0 0 40px rgba(255, 50, 50, 0.8);
+  transform: scale(1.05);
+}
+
+/*flash effect ??? not sure about this one but i`ll leave it in, for now :-) */
+button:active {
+  transform: scale(0.9);
+  background: radial-gradient(circle at center, #ff4040 0%, #660000 90%);
+  box-shadow: 0 0 32px rgba(255, 255, 255, 0.9), inset 0 0 12px #ff0000;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+  }
+}
+
 
 /* reminder! for my own reference the bullet holes go here (in case i decide to change the .png */
 .bullet-hole {

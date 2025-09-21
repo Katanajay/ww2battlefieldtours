@@ -14,7 +14,7 @@ function fireBullets() {
     }, i * 200);
   }
 
-  // redirect once, after the loop finishes
+  // redirect once, after the loop finishes, just reminding myself if i want to change the delay //
   setTimeout(() => {
     window.location.href = "/northern-france";
   }, 2000);
