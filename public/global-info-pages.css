@@ -19,7 +19,7 @@
 
 
 /* Oishin taught us about pseudo elements, this was a game changer here for me otherwise i couldnt get the BG right*/
-/*I am placing my pseudo element here to position the map behind all elements */ 
+/*I am placing my pseudo element here to position the map images behind all elements */ 
 
 body.caen::before,
 body.stmere::before,
