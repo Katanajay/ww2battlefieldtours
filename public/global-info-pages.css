@@ -32,25 +32,25 @@ body.merville::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
-
 body.caen::before {
-  background-image: url("/ww2battlefieldtours/Caen-Map.jpg");
+  background-image: url("/ww2battlefieldtours/caen-map.jpg");
 }
 
 body.stmere::before {
-  background-image: url("/ww2battlefieldtours/st mere eglise map.jpg");
+  background-image: url("/ww2battlefieldtours/st-mere-eglise-map.jpg");
 }
 
 body.omaha::before {
-  background-image: url("/ww2battlefieldtours/omaha beach map.jpg");
+  background-image: url("/ww2battlefieldtours/omaha-beach-map.jpg");
 }
 
 body.merville::before {
-  background-image: url("/ww2battlefieldtours/merville battery map.jpg");
+  background-image: url("/ww2battlefieldtours/merville-battery-map.jpg");
 }
+
 
 
 header {
