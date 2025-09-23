@@ -16,6 +16,6 @@ function fireBullets() {
 
   // redirect once, after the loop finishes, just reminding myself if i want to change the delay //
   setTimeout(() => {
-    window.location.href = "/northern-france";
+    window.location.href = "/ww2battlefieldtours/northern-france";
   }, 2000);
 }
