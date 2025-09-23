@@ -1,18 +1,18 @@
 @font-face {
   font-family: "WarWound";
-  src: url("/fonts/WarWound.otf") format("truetype");
+  src: url("/ww2battlefieldtours/fonts/WarWound.otf") format("truetype");
   font-display: swap;
 }
 
 
 @font-face {
   font-family: "Stencil Cargo Army";
-  src: url("/fonts/Stencil Cargo Army.otf") format("opentype");
+  src: url("/ww2battlefieldtours/fonts/Stencil Cargo Army.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "armalite";
-  src: url("/fonts/armalite.ttf") format("truetype");
+  src: url("/ww2battlefieldtours/fonts/armalite.ttf") format("truetype");
   font-display: swap;
 }
 
