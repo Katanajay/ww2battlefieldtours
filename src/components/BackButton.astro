@@ -1,0 +1,53 @@
+
+---
+const { label = "← Back" } = Astro.props;
+---
+
+<!-- this back button i found on https://ui.full.dev/docs/ they had 
+ a load of really good astro elements however i did a little styling on it myself -->
+ 
+<button id="back-button" class="back-button">
+  {label}
+</button>
+
+<script>
+  if (typeof window !== "undefined") {
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("back-button");
+      if (btn) {
+        btn.addEventListener("click", () => {
+          history.back();
+        });
+      }
+    });
+  }
+</script>
+
+<style>
+  .back-button {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: darkred;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 0 black;
+    transition:
+      transform 0.1s ease,
+      background 0.2s ease;
+  }
+
+  .back-button:hover {
+    background-color: crimson;
+    transform: scale(1.05);
+  }
+
+  .back-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 0 black;
+  }
+</style>
