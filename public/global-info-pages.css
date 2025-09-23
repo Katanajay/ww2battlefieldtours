@@ -37,19 +37,19 @@ body.merville::before {
 
 
 body.caen::before {
-  background-image: url("/ww2battlefieldtours/public/Caen-Map.jpg");
+  background-image: url("/ww2battlefieldtours/Caen-Map.jpg");
 }
 
 body.stmere::before {
-  background-image: url("/ww2battlefieldtours/public/st mere eglise map.jpg");
+  background-image: url("/ww2battlefieldtours/st mere eglise map.jpg");
 }
 
 body.omaha::before {
-  background-image: url("/ww2battlefieldtours/public/omaha beach map.jpg");
+  background-image: url("/ww2battlefieldtours/omaha beach map.jpg");
 }
 
 body.merville::before {
-  background-image: url("/ww2battlefieldtours/public/merville battery map.jpg");
+  background-image: url("/ww2battlefieldtours/merville battery map.jpg");
 }
 
 
