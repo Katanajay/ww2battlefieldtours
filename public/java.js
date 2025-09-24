@@ -10,6 +10,7 @@ function fireBullets() {
       document.body.appendChild(hole);
 
       const shot = gunshot.cloneNode();
+      shot.volume = 0.3; // i am going to reduce the sound of the gunshot i realise some people may have sound on full //
       shot.play();
     }, i * 200);
   }
