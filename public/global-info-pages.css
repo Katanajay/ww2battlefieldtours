@@ -36,8 +36,9 @@ body.merville::before {
 }
 
 body.caen::before {
-  background-image: url("/ww2battlefieldtours/Caen-map.jpg");
+  background-image: url("/Caen-map.jpg");
 }
+
 
 body.stmere::before {
   background-image: url("/ww2battlefieldtours/st-mere-eglise-map.jpg");
