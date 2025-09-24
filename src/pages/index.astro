@@ -19,56 +19,58 @@ import "../styles/global.css";
       />
     </h1>
 
-    <div class="container">
-      <div class="divs">
-        <div class="one">
-          <div class="flag france">
-            <div class="stripe blue"></div>
-            <div class="stripe white"></div>
-            <div class="stripe red"></div>
-          </div>
-          <div style="text-align:center">
-            <p>FRANCE</p>
-          </div>
-
-          <button onclick="fireBullets()">FIRE</button>
-          <audio
-            id="gunshot"
-            src="/ww2battlefieldtours/gunshot.mp3"
-            preload="auto"></audio>
-        </div>
-
-        <div class="two">
-          <div class="flag belgium">
-            <div class="stripe black"></div>
-            <div class="stripe yellow"></div>
-            <div class="stripe red"></div>
-          </div>
-          <p>BELGIUM</p>
-          <p>COMING SOON!</p>
-        </div>
-
-        <div class="three">
-          <div class="flag luxembourg">
-            <div class="stripe red"></div>
-            <div class="stripe white"></div>
-            <div class="stripe lightblue"></div>
-          </div>
-          <p>LUXEMBOURG</p>
-          <p>COMING SOON!</p>
-        </div>
-
-        <div class="four">
-          <div class="flag netherlands">
-            <div class="stripe red"></div>
-            <div class="stripe white"></div>
-            <div class="stripe blue"></div>
-          </div>
-          <p>NETHERLANDS</p>
-          <p>COMING SOON!</p>
-        </div>
+<div class="container">
+  <div class="divs">
+    <!-- France -->
+    <div class="one">
+      <div class="flag france">
+        <div class="stripe blue"></div>
+        <div class="stripe white"></div>
+        <div class="stripe red"></div>
       </div>
+      <div style="text-align:center">
+        <p>FRANCE</p>
+      </div>
+
+      <button onclick="fireBullets()">FIRE</button>
+      <audio id="gunshot" src="/ww2battlefieldtours/gunshot.mp3" preload="auto"></audio>
     </div>
+
+    <!-- Luxembourg (moved up to second box) -->
+    <div class="two">
+      <div class="flag luxembourg">
+        <div class="stripe red"></div>
+        <div class="stripe white"></div>
+        <div class="stripe lightblue"></div>
+      </div>
+      <p>LUXEMBOURG</p>
+      <p>COMING SOON!</p>
+    </div>
+
+    <!-- Belgium (moved down to third box) -->
+    <div class="three">
+      <div class="flag belgium">
+        <div class="stripe black"></div>
+        <div class="stripe yellow"></div>
+        <div class="stripe red"></div>
+      </div>
+      <p>BELGIUM</p>
+      <p>COMING SOON!</p>
+    </div>
+
+    <!-- Netherlands -->
+    <div class="four">
+      <div class="flag netherlands">
+        <div class="stripe red"></div>
+        <div class="stripe white"></div>
+        <div class="stripe blue"></div>
+      </div>
+      <p>NETHERLANDS</p>
+      <p>COMING SOON!</p>
+    </div>
+  </div>
+</div>
+
   </body>
 </html>
 
