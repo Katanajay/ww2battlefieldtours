@@ -35,9 +35,12 @@ body.merville::before {
   opacity: 0.1;
 }
 
+
+
 body.caen::before {
-  background-image: url("/Caen-map.jpg");
+  background-image: url("/ww2battlefieldtours/Caen-map.jpg");
 }
+
 
 
 body.stmere::before {

@@ -164,7 +164,7 @@ button:active {
   position: absolute;
   width: 40px;
   height: 40px;
-  background: url('/bullet_hole.png') no-repeat center center;
+  background: url('/ww2battlefieldtours/bullet_hole.png') no-repeat center center;
   background-size: contain;
   pointer-events: none;
 }
