@@ -6,6 +6,6 @@ I imported specific fonts to keep the whole military look and feel. The pseudo e
 
 I have reduced the volumne of the gunshots, however on some machines it sounds louder please forgive me if this is too loud for you (war is hell ;-) 
 
-I had to speed up my video because it was getting too long, i hope I dont sound like a chipmonk!
+I had to speed up my video because it was getting too long, i hope I dont sound like a chipmunk!
 
 Thank you so much for giving me the ability to create a website, I have thouroughly enjoyed this experience.
