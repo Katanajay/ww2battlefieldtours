@@ -4,7 +4,7 @@ import Weather from "../components/Weather.astro";
 import BackButton from "../components/BackButton.astro";
 ---
 
-<BaseLayout title="St Mere Eglise in World War Two" bodyClass="stmere"></BaseLayout>
+<BaseLayout title="St Mere Eglise in World War Two" bodyClass="stmere" />
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -143,10 +143,7 @@ import BackButton from "../components/BackButton.astro";
 
     <h5>Weather</h5>
 
- <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="ST MERE EGLISE" data-label_2="WEATHER" data-theme="original" >ST MERE EGLISE WEATHER</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+    <Weather locationName="Sainte-Mère-Église" lat={49.4086} lon={-1.3175} />
 
     <footer>
       <p>
@@ -184,6 +181,6 @@ import BackButton from "../components/BackButton.astro";
         </small>
       </p>
     </footer>
-   <BackButton label="Back to Previous Page" />
+    <BackButton label="Back to Previous Page" />
   </body>
 </html>

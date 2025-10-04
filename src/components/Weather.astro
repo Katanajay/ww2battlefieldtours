@@ -1,51 +1,139 @@
 ---
-const { locationName, href } = Astro.props;
----
-<!--Ok So I was having trouble with my original weather app widget Oishin gave me tips on how to change the script so that all locations 
-worked from the one script by changing the lat and long, I finally did it after changing the widget it just wouldn`t work on my old one
-and i am happier with this one as it looks nicer in the page -->
+const { locationName, lat, lon } = Astro.props;
 
-<div class="weather-widget">
-  <h5>{locationName}</h5>
-  <a
-    class="weatherwidget-io"
-    href={href}
-    data-label_1={locationName.toUpperCase()}
-    data-label_2="WEATHER"
-    data-theme="original"
-  >
-    {locationName} WEATHER
-  </a>
+const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true&daily=temperature_2m_max,temperature_2m_min,weathercode,windspeed_10m_max&timezone=auto&forecast_days=5`;
+
+const response = await fetch(apiUrl);
+const data = await response.json();
+
+const weather = data.current_weather;
+const daily = data.daily;
+
+// I added this Weather Widget but I didn`t like the style so i got help on reddit to alter the style with icons //
+function getWeatherDescription(code) {
+  const map = {
+    0: "Clear ☀️",
+    1: "Mainly clear 🌤️",
+    2: "Partly cloudy ⛅",
+    3: "Overcast ☁️",
+    45: "Fog 🌫️",
+    48: "Rime fog 🌫️",
+    51: "Light drizzle 🌦️",
+    53: "Moderate drizzle 🌦️",
+    55: "Dense drizzle 🌦️",
+    61: "Light rain 🌧️",
+    63: "Moderate rain 🌧️",
+    65: "Heavy rain 🌧️",
+    71: "Light snow ❄️",
+    73: "Moderate snow ❄️",
+    75: "Heavy snow ❄️",
+    77: "Snow grains ❄️",
+    80: "Light showers 🌦️",
+    81: "Moderate showers 🌦️",
+    82: "Violent showers 🌧️",
+    85: "Light snow showers ❄️",
+    86: "Heavy snow showers ❄️",
+    95: "Thunderstorm ⛈️",
+    96: "Storm w/ hail 🌩️",
+    99: "Severe storm w/ hail 🌩️",
+  };
+  return map[code] || "Unknown 🌍";
+}
+---
+
+<div class="weather-box">
+  <h2>Weather in {locationName}</h2>
+
+  {
+    weather ? (
+      <div class="weather-info">
+        <p>
+          <strong>Now:</strong> {weather.temperature}°C,{" "}
+          {getWeatherDescription(weather.weathercode)}, {weather.windspeed} km/h
+          winds
+        </p>
+      </div>
+    ) : (
+      <p>Weather data not available</p>
+    )
+  }
+
+  {
+    daily ? (
+      <div class="forecast">
+        <h3>5-Day Forecast</h3>
+        <div class="forecast-cards">
+          {daily.time.map((date, i) => (
+            <div class="forecast-card">
+              <p class="date">
+                {new Date(date).toLocaleDateString(undefined, {
+                  weekday: "short",
+                  day: "numeric",
+                  month: "short",
+                })}
+              </p>
+              <p class="icon">{getWeatherDescription(daily.weathercode[i])}</p>
+              <p>
+                🌡️ {daily.temperature_2m_min[i]}° /{" "}
+                {daily.temperature_2m_max[i]}°C
+              </p>
+              <p>💨 {daily.windspeed_10m_max[i]} km/h</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    ) : null
+  }
 </div>
 
-
-<script is:inline>
-{`
-!function(d,s,id){
-  var js,fjs=d.getElementsByTagName(s)[0];
-  if(!d.getElementById(id)){
-    js=d.createElement(s);
-    js.id=id;
-    js.src='https://weatherwidget.io/js/widget.min.js';
-    fjs.parentNode.insertBefore(js,fjs);
-  }
-}(document,'script','weatherwidget-io-js');
-`}
-</script>
-
-
 <style>
-  .weather-widget {
-    margin-bottom: 1.5rem;
+  .weather-box {
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    border-radius: 12px;
     padding: 1rem;
-    border: 2px solid #333;
-    border-radius: 8px;
-    background: rgba(240,240,240,0.9);
+    margin: 1rem auto;
+    max-width: 700px;
+    text-align: center;
+    font-family: Arial, sans-serif;
   }
 
-  .weather-widget h5 {
+  .weather-box h2 {
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+  }
+
+  .weather-info {
+    margin-bottom: 1rem;
+  }
+
+  .forecast h3 {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+
+  .forecast-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .forecast-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .forecast-card .date {
     font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  .forecast-card .icon {
+    font-size: 1.2rem;
+    margin: 0.25rem 0;
   }
 </style>
