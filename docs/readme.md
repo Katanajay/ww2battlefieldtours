@@ -2,7 +2,7 @@
 
 
 
-![Alt text](public\Soldier-salute.png)
+![Alt text](/public\Soldier-salute.png)
 
 
 
