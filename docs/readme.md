@@ -1,11 +1,4 @@
-
-
-
-
-![Alt text](/public\Soldier-salute.png)
-
-
-
+![Soldier Salute](public/Soldier-salute.png)
 
 
 
