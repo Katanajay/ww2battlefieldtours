@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 Primarily and with slight additions like a 'contact form' this site could be used as a tour guides website. There are many tours across the battlefields of europe and is quite lucrative. The site could also be used by a governing body as a reference i.e. a tourist office, again for detailed information on any particular area. 
 
 I have travelled across all these places so the knowledge is genuine and these areas are the best possible locations for museums. 
