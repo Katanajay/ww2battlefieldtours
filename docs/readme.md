@@ -1,6 +1,6 @@
 # World War Two Battlefield Tours
 
-![Soldier Salute](../public/Soldier-salute.png)
+![Soldier Salute](../public/TheFallen.png)
 
 ## 🌍 About the Project
 Explore the historic battlefields of Normandy during World War II.  
